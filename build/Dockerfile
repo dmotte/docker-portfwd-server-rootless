@@ -8,7 +8,7 @@ EXPOSE 2222
 COPY --chown=root:root --chmod=755 startup.sh /
 
 RUN addgroup -S portfwd && adduser -S portfwd -G portfwd && \
-    install -oportfwd -gportfwd -dm700 /ssh-host-keys /ssh-client-keys \
+    install -oportfwd -gportfwd -dvm700 /ssh-host-keys /ssh-client-keys \
     /home/portfwd/sshd /home/portfwd/.ssh
 
 USER portfwd
