@@ -15,4 +15,4 @@ USER portfwd
 
 COPY --chown=portfwd:portfwd --chmod=644 sshd_config /home/portfwd/sshd/
 
-ENTRYPOINT ["/startup.sh"]
+ENTRYPOINT ["/bin/ash", "/startup.sh"]
